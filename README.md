@@ -1,161 +1,140 @@
-# spring-learning-plan
-# Spring Topics Learning Plan
+# Spring Learning Plan
 
-## 1. Spring Security
-Spring Security is a powerful and customizable authentication and access-control framework for securing Spring-based applications.
+## 1. Spring Security - The Dynamics of How It Works
+- [ ] Octa - Manage user authentication and authorization.
+- [ ] Keycloak - Manage user authentication and authorization.
+- [ ] Authentication - The process of verifying who a user is.
+- [ ] Authorization - The process of verifying what a user has access to.
+- [ ] JWT - JSON Web Token.
+- [ ] Spring Security OAuth2 - Integrate with third-party authentication providers.
+- [ ] Spring Security Test - Test the security of your application.
+- [ ] Spring Security ACL - Implement access control lists.
+- [ ] Spring Security LDAP - Integrate with LDAP servers.
+- [ ] Spring Security JAAS - Integrate with Java Authentication and Authorization Service.
+- [ ] Spring Security SAML - Integrate with SAML 2.0 identity providers.
+- [ ] Spring Security OpenID - Integrate with OpenID identity providers.
+- [ ] Spring Security CAS - Integrate with Central Authentication Service.
+- [ ] Spring Security Kerberos - Integrate with Kerberos authentication.
+- [ ] Spring Security Remember Me - Implement remember me functionality.
+- [ ] Spring Security CSRF - Protect against cross-site request forgery attacks.
 
-- **Authentication**: Process of verifying who the user is.
-- **Authorization**: Process of verifying what the user is allowed to access.
-- **JWT (JSON Web Token)**: A compact, URL-safe means of representing claims to be transferred between two parties.
-- **Spring Security OAuth2**: Integrates Spring applications with third-party authentication providers like Google or Facebook.
-- **Spring Security Test**: Tools to help test the security of your application.
-- **Spring Security ACL**: Access Control List implementation to define fine-grained permissions for users.
-- **Spring Security LDAP**: Integration with LDAP servers for authentication.
-- **Spring Security JAAS**: Java Authentication and Authorization Service support.
-- **Spring Security SAML**: Integration with SAML 2.0 identity providers.
-- **Spring Security OpenID**: Integration with OpenID identity providers.
-- **Spring Security CAS**: Central Authentication Service integration.
-- **Spring Security Kerberos**: Authentication based on the Kerberos protocol.
-- **Spring Security Remember Me**: Persistence of user login sessions.
-- **Spring Security CSRF**: Cross-Site Request Forgery protection.
-- **Okta**: A cloud-based platform to manage authentication and authorization.
-- **Keycloak**: Open-source identity and access management.
+## 2. Spring Boot Scheduler - The Dynamics of How It Works
+- [ ] Shedlock - Prevent multiple instances of the same job from running at the same time.
+- [ ] Quartz - Schedule jobs.
+- [ ] Cron Expression - Schedule jobs using cron syntax.
+- [ ] `@Scheduled(cron = "0 0 0 * * *")` - Schedule a job to run every day at midnight.
+- [ ] `@Scheduled(fixedDelay = 5000)` - Schedule a job to run every 5 seconds.
+- [ ] `@Scheduled(fixedRate = 5000)` - Schedule a job to run every 5 seconds.
+- [ ] `@Scheduled(initialDelay = 5000, fixedDelay = 5000)` - Schedule a job to run every 5 seconds after an initial delay.
 
-## 2. Spring Boot Scheduler
-Spring Boot provides support for scheduled tasks with a variety of scheduling options.
+## 3. Spring Boot Actuator - The Dynamics of How It Works
+- [ ] 12 Endpoints - Monitor and manage your application.
+- [ ] `/health` - Check the health of your application.
+- [ ] `/info` - Display information about your application.
+- [ ] `/metrics` - Display metrics about your application.
+- [ ] `/loggers` - Display and modify the logging level of your application.
+- [ ] `/heapdump` - Dump the heap of your application.
+- [ ] `/threaddump` - Dump the threads of your application.
+- [ ] `/beans` - Display the beans of your application.
+- [ ] `/env` - Display the environment properties of your application.
+- [ ] `/mappings` - Display the request mappings of your application.
+- [ ] `/scheduledtasks` - Display the scheduled tasks of your application.
+- [ ] `/httptrace` - Display the HTTP trace of your application.
+- [ ] `/auditevents` - Display the audit events of your application.
+- [ ] `/shutdown` - Shutdown your application.
+- [ ] `/refresh` - Refresh the configuration of your application.
+- [ ] `/pause` - Pause the scheduled tasks of your application.
+- [ ] `/resume` - Resume the scheduled tasks of your application.
 
-- **@Scheduled(cron = "...")**: Cron expression to define precise scheduling, e.g., daily at midnight.
-- **@Scheduled(fixedDelay = ...)**: Executes after a fixed delay between task completions.
-- **@Scheduled(fixedRate = ...)**: Executes at a fixed rate regardless of task completion.
-- **@Scheduled(initialDelay = ..., fixedDelay = ...)**: Executes after an initial delay and continues with a fixed delay.
-- **Shedlock**: Prevents multiple instances of the same job from running simultaneously.
-- **Quartz**: A job scheduling library that can be integrated with Spring.
+## 4. JPA Caching - The Dynamics of How It Works
+- [ ] First Level Cache - Maintained by the EntityManager.
+- [ ] Second Level Cache - Maintained by the provider.
+- [ ] Query Caching - Cache results of queries.
+- [ ] Collection Caching - Cache results of collections.
+- [ ] Cache Regions - Logical grouping of cacheable entities.
+- [ ] Cache Providers - Implementation of caching mechanism.
+- [ ] EhCache - Default cache provider for Hibernate.
+- [ ] Infinispan - Cache provider for Hibernate.
+- [ ] Hazelcast - Cache provider for Hibernate.
+- [ ] Coherence - Cache provider for Hibernate.
 
-## 3. Spring Boot Actuator
-Actuator provides production-ready features to help monitor and manage your Spring Boot application.
+## 5. Hibernate Caching - The Dynamics of How It Works
+- [ ] 1st Level Cache - Maintained by the Session.
+- [ ] 2nd Level Cache - Maintained by the SessionFactory.
+- [ ] Query Cache - Cache results of queries maintained by the SessionFactory.
 
-- **/health**: Endpoint to check the health status of the application.
-- **/info**: Displays information about the application.
-- **/metrics**: Provides various metrics, like memory usage.
-- **/loggers**: Enables dynamic configuration of logging levels.
-- **/heapdump**: Dumps the heap for troubleshooting.
-- **/threaddump**: Dumps thread information for analysis.
-- **/beans**: Displays all Spring beans in the application.
-- **/env**: Shows environment properties.
-- **/mappings**: Displays request mappings of the application.
-- **/scheduledtasks**: Lists scheduled tasks.
-- **/httptrace**: Displays HTTP requests and responses.
-- **/auditevents**: Displays security-related events.
-- **/shutdown**: Shuts down the application.
-- **/refresh**: Refreshes the application configuration.
-- **/pause**: Pauses the scheduled tasks.
-- **/resume**: Resumes paused tasks.
+## 6. Distributed Transactions in Microservices - The Dynamics of How It Works
+- [ ] Saga Pattern - Manage distributed transactions.
+- [ ] Two-phase Commit Protocol - Manage distributed transactions.
+- [ ] XA Protocol - Manage distributed transactions.
+- [ ] 2PC - Two-phase commit.
+- [ ] 3PC - Three-phase commit.
+- [ ] 4PC - Four-phase commit.
+- [ ] 5PC - Five-phase commit.
+- [ ] TCC - Try-confirm/cancel transactions.
+- [ ] 1PC - One-phase commit.
+- [ ] 0PC - Zero-phase commit.
+- [ ] BASE - Basic Availability, Soft State, Eventual Consistency.
+- [ ] ACID - Atomicity, Consistency, Isolation, Durability.
+- [ ] CAP Theorem - Consistency, Availability, Partition Tolerance.
 
-## 4. JPA Caching
-Caching improves performance by minimizing database access.
+## 7. Microservices Communication - The Dynamics of How It Works
+- [ ] REST - Communicate between microservices.
+- [ ] SOAP - Communicate between microservices.
+- [ ] RPC - Remote procedure calls for microservices communication.
+- [ ] Message Broker - Communicate between microservices using a broker.
+- [ ] RabbitMQ - Message broker.
+- [ ] Kafka - Stream processing and message broker.
+- [ ] Apache ActiveMQ - Message broker.
+- [ ] Apache Kafka - Message broker and stream processing.
 
-- **First-level Cache**: Cache maintained by the EntityManager for the lifecycle of a session.
-- **Second-level Cache**: Cache maintained at the provider level (e.g., Hibernate).
-- **Query Caching**: Stores the results of queries for reuse.
-- **Collection Caching**: Caches results of collections to reduce database calls.
-- **Cache Regions**: Logical grouping of cacheable entities.
-- **EhCache**: Default cache provider for Hibernate.
-- **Infinispan, Hazelcast, Coherence**: Other cache providers supported by Hibernate.
+## 8. Microservices Security - The Dynamics of How It Works
+- [ ] OAuth2 - Secure microservices.
+- [ ] JWT - Secure microservices.
+- [ ] Spring Security - Secure microservices.
+- [ ] Spring Security OAuth2 - Secure microservices.
 
-## 5. Hibernate Caching
-Hibernate provides first and second-level caching mechanisms.
+## 9. Microservices Deployment - The Dynamics of How It Works
+- [ ] 12 Factor App - Deploy microservices.
+- [ ] Docker - Deploy microservices.
+- [ ] Kubernetes - Deploy microservices.
 
-- **First-level Cache**: Maintained by the session, a short-lived cache.
-- **Second-level Cache**: Maintained by the SessionFactory, shared among all sessions.
-- **Query Cache**: Caches query results for reuse across multiple sessions.
+## 10. Microservices Monitoring - The Dynamics of How It Works
+- [ ] Prometheus - Monitor microservices.
+- [ ] Grafana - Monitor microservices.
 
-## 6. Distributed Transactions in Microservices
-Managing transactions across microservices can be challenging, and different strategies are used to ensure consistency.
+## 11. Microservices Logging - The Dynamics of How It Works
+- [ ] ELK Stack - Log microservices.
+- [ ] 12 Factor App - Log microservices.
 
-- **Saga Pattern**: Breaks down transactions into a series of local transactions.
-- **Two-phase Commit (2PC)**: Ensures all participants agree to commit a transaction.
-- **XA Protocol**: A standard for distributed transaction processing.
-- **1PC, 2PC, 3PC, 4PC, 5PC**: Varying protocols for coordinating distributed transactions.
-- **TCC (Try-Confirm-Cancel)**: Ensures distributed consistency by trying an operation, confirming, or canceling it.
-- **BASE vs. ACID**: Different approaches to handling consistency in distributed systems.
-- **CAP Theorem**: Defines trade-offs between Consistency, Availability, and Partition Tolerance.
+## 12. Microservices Testing - The Dynamics of How It Works
+- [ ] Unit Testing - Test microservices.
+- [ ] Integration Testing - Test microservices.
 
-## 7. Microservices Communication
-Microservices must communicate reliably, and several methods are used to ensure communication.
+## 13. Microservices CI/CD - The Dynamics of How It Works
+- [ ] Jenkins - Implement CI/CD for microservices.
+- [ ] 12 Factor App - Implement CI/CD for microservices.
 
-- **REST**: HTTP-based communication between services.
-- **SOAP**: XML-based protocol for service communication.
-- **RPC**: Remote Procedure Call for invoking methods in distributed systems.
-- **Message Broker**: Asynchronous communication via brokers like RabbitMQ and Kafka.
-- **RabbitMQ**: A messaging broker for microservices communication.
-- **Apache Kafka**: Distributed event-streaming platform.
+## 14. Microservices Versioning - The Dynamics of How It Works
+- [ ] Semantic Versioning - Version microservices.
 
-## 8. Microservices Security
-Security for microservices requires specialized strategies.
+## 15. Microservices Documentation - The Dynamics of How It Works
+- [ ] Swagger - Document microservices.
 
-- **OAuth2**: Token-based authentication and authorization.
-- **JWT**: Commonly used with OAuth2 to pass user information securely.
-- **Spring Security**: Framework for securing Spring-based microservices.
+## 16. Microservices Best Practices - The Dynamics of How It Works
+- [ ] 12 Factor App - Follow best practices for microservices.
+- [ ] Microservices Patterns - Follow best practices for microservices.
 
-## 9. Microservices Deployment
-Deployment of microservices involves specialized tools and practices.
+## 17. Microservices Architecture - The Dynamics of How It Works
+- [ ] Monolithic Architecture - Understand how it works.
 
-- **12-factor app**: A methodology for building modern, scalable applications.
-- **Docker**: Containerization platform to deploy applications in isolated environments.
-- **Kubernetes**: Orchestration system for automating deployment, scaling, and management of containerized applications.
+## 18. Microservices - The Dynamics of How It Works
+- [ ] 12 Factor App - Understand how it works.
+- [ ] Microservices Patterns - Understand how it works.
 
-## 10. Microservices Monitoring
-Monitoring is essential to maintain the health and performance of microservices.
-
-- **Prometheus**: Monitoring and alerting toolkit.
-- **Grafana**: Analytics and monitoring platform.
-
-## 11. Microservices Logging
-Logging is critical for debugging and maintaining microservices.
-
-- **ELK Stack**: Elasticsearch, Logstash, and Kibana for logging and analyzing logs.
-- **12-factor app**: Logging practices for modern applications.
-
-## 12. Microservices Testing
-Testing is crucial to ensure the reliability of microservices.
-
-- **Unit Testing**: Testing individual components in isolation.
-- **Integration Testing**: Testing how components interact with each other.
-
-## 13. Microservices CI/CD
-Continuous Integration and Continuous Deployment (CI/CD) streamline microservices delivery.
-
-- **Jenkins**: Automation server for building, testing, and deploying code.
-- **12-factor app**: Guidelines for CI/CD.
-
-## 14. Microservices Versioning
-Versioning is essential to manage changes in microservices APIs.
-
-- **Semantic Versioning**: A versioning scheme that uses major, minor, and patch numbers.
-
-## 15. Microservices Documentation
-Good documentation ensures that microservices are easy to understand and use.
-
-- **Swagger**: API documentation and interaction tool.
-
-## 16. Microservices Best Practices
-Adopting best practices ensures efficient and maintainable microservices.
-
-- **12-factor app**: Best practices for microservices.
-- **Microservices Patterns**: Common architectural patterns used in microservices.
-
-## 17. Microservices Architecture
-Understanding different architectures can guide decisions on whether microservices or monolithic approaches are suitable.
-
-- **Monolithic Architecture**: All components reside within a single system.
-- **Microservices Patterns**: Patterns like Service Mesh, Circuit Breaker for designing microservices.
-
-## 18. NoSQL Databases
-NoSQL databases provide flexible schemas for storing data.
-
-- **MongoDB**: Document-based NoSQL database.
-- **Cassandra**: Distributed NoSQL database.
-- **Redis**: In-memory key-value store.
-- **CouchDB**: Document-oriented NoSQL database.
-- **Riak**: Key-value NoSQL database.
-
+## 19. NoSQL - The Dynamics of How It Works
+- [ ] MongoDB - Understand how it works.
+- [ ] Cassandra - Understand how it works.
+- [ ] Redis - Understand how it works.
+- [ ] CouchDB - Understand how it works.
+- [ ] Riak - Understand how it works.
